@@ -153,5 +153,13 @@ userRouter.get(
     res.json(users);
   })
 );
+// GET ALL USER ADMIN
+userRouter.get(
+  "/getusers",
+  asyncHandler(async (req, res) => {
+    const users = await User.find({});
+    res.json(users);
+  })
+);
 
 export default userRouter;

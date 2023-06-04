@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Attendance = () => {
   useEffect(() => {
-    axios.get("/getusers")
+    axios.get("/api/users/getusers")
     .then((res)=>{
       console.log("res",res)
     })
