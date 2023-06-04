@@ -84,6 +84,7 @@ const eventSchema = new mongoose.Schema({
 });
 const Event = mongoose.model("Event", eventSchema);
 
+
 // Save a new event
 app.post("/api/events", (req, res) => {
   const { title, start, end } = req.body;
@@ -161,20 +162,6 @@ app.post("/messages", (req, res) => {
       res.status(500).send("Error occurred while saving the message");
     });
 });
-
-app.get("/getusers",(req,res)=>{
-  console.log("user req res",req)
-})
-
-app.get("/getusers",
-// asyncHandler(async 
-  (req, res) => {
-  console.log("user req res",req)
-  // const user = await User.find({});
-  res.json(user.name);
-}
-// )
-);
 
 // ERROR HANDLER
 app.use(notFound);
